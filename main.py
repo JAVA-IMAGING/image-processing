@@ -1,6 +1,6 @@
 # code for main file goes here
 def main():
-    pass
+    print("kontol")
 
 # run main
 if __name__ == "__main__":
