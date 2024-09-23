@@ -10,11 +10,11 @@ supposed to do with astronomy pictures.
 
 ##  Overview
 
-So basically we don't really know. Once we got a diagram or smth we can put it here
+Trying to figure out the previous code
 
 ##  Packages used
 
-List of packages used in this project can be found [here](./requirements.txt)
+Look it up in the pom.xml file
 
 ##  Project Setup
 
