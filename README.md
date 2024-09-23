@@ -20,7 +20,8 @@ List of packages used in this project can be found [here](./requirements.txt)
 
 ### Prerequisites
 
-- Python3: [[download link]](https://www.python.org/downloads/) | [[Windows setup]](https://docs.python.org/3/using/windows.html) | [[Mac setup]](https://docs.python.org/3/using/mac.html)
+- Java 11: [[download link]](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html)
+- Maven (_optional_): [[download link]](https://maven.apache.org/download.cgi)
 
 ### Installation
 
@@ -32,6 +33,6 @@ List of packages used in this project can be found [here](./requirements.txt)
 
     `cd ./image-processing`
 
-3. Install required packages
+3. Run Maven wrapper command
 
-    `pip install -r requirements.txt`
+    `TO BE IMPLEMENTED`
