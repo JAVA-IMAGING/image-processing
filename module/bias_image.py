@@ -1,1 +1,0 @@
-# implement bias image processing
