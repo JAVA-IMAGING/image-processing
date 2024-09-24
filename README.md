@@ -14,7 +14,7 @@ Trying to figure out the previous code
 
 ##  Packages used
 
-Look it up in the pom.xml file
+Look it up in the pom.xml file under dependencies
 
 ##  Project Setup
 
@@ -29,10 +29,13 @@ Look it up in the pom.xml file
 
     `git clone https://github.com/JAVA-IMAGING/image-processing.git`
 
-2. Navigate to project directory
+2. Navigate to Maven project directory
 
-    `cd ./image-processing`
+    `cd ./image-processing/java-imaging`
 
-3. Run Maven wrapper command
+3. Validate and compile the Maven project
+    - `mvn validate` and `mvn compile`, a _test_ directory will then be created with class files. 
+    - If Maven is not installed, replace `mvn` with either `./mvnw` or `.\mvnw.cmd`  if system is Windows or Linux/Mac respectively to make use of the wrapper
 
-    `TO BE IMPLEMENTED`
+4. Package the compiled code and run
+    `mvn package` will compile once more before packaging into _.jar_ file. Execute _.jar_ file found in _test_ directory `java -cp target/<jar-file-name>.jar com.package.of.main.file`
