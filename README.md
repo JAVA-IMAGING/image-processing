@@ -38,4 +38,5 @@ Look it up in the pom.xml file under dependencies
     - If Maven is not installed, replace `mvn` with either `./mvnw` or `.\mvnw.cmd`  if system is Windows or Linux/Mac respectively to make use of the wrapper
 
 4. Package the compiled code and run
+
     `mvn package` will compile once more before packaging into _.jar_ file. Execute _.jar_ file found in _test_ directory `java -cp target/<jar-file-name>.jar com.package.of.main.file`
