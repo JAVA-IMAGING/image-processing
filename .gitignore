@@ -27,3 +27,6 @@ replay_pid*
 
 *.fits
 *.png
+
+# IGNORE LOG FILES
+logs/
