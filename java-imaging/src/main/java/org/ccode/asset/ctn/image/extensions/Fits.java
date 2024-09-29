@@ -88,7 +88,7 @@ public class Fits extends nom.tam.fits.Fits {
     public static Fits[] collectObjects(String path, String type) {
 
         List<String> filePaths;
-        Fits[] imageArray = new Fits[0];
+        Fits[] imageArray = new Fits[0];    // why initialize to 0?
         try {
             //set path to fits files. I used python test images.
             Stream<Path> paths = Files.walk(Paths.get(path));
@@ -113,7 +113,7 @@ public class Fits extends nom.tam.fits.Fits {
 
             Fits[] resizedImageArray = new Fits[i];
             //imageArray[0].dumpHeader();
-            System.arraycopy(imageArray, 0, resizedImageArray, 0, i);
+            System.arraycopy(imageArray, 0, resizedImageArray, 0, i);   // maybe this is why we initialize to 0 at the start?
             //resizedImageArray[0].dumpHeader();
             return resizedImageArray;
 
@@ -273,6 +273,7 @@ public class Fits extends nom.tam.fits.Fits {
     }
 
     public static void main(String[] args) {
-        collectObjectsTest();
+        /* Move testing to Main.java */
+        // collectObjectsTest();
     }
 }

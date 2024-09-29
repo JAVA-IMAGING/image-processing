@@ -536,7 +536,7 @@ public class FitsDocument {
     //A test program
     public static void main(String[] args) {
         try {
-            Fits fits = new Fits(Constants.testFitsPath + "/img-0079r.fits");
+            Fits fits = new Fits(Constants.testInputPath + "img-0079r.fits");
             BasicHDU imageHDU = fits.getHDU(0);
             Object data = imageHDU.getKernel();
             Data d = imageHDU.getData();
