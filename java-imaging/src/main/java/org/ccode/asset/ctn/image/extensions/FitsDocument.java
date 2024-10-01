@@ -384,6 +384,7 @@ public class FitsDocument {
         }
     }
 
+    // Why have two of these? What's the point of the newHeader when the other one didn't even need it?
     public static void writeFits(String destination, float[][] data, Header newHeader) {
         try {
             // Create a new FITS file
@@ -404,7 +405,7 @@ public class FitsDocument {
                     fitsData[row][col] = (short) (data[row][col] * MAX_USHORT_VAL + Short.MIN_VALUE);
 
             // Add data to fits file
-            ImageHDU hdu = new ImageHDU(newHeader, new ImageData(fitsData)); //ImageHDU constructor deprecated, might wanna fix this
+            ImageHDU hdu = new ImageHDU(newHeader, new ImageData(fitsData));    // ImageHDU constructor deprecated, might wanna fix this
             fitsFile.addHDU(hdu);
 
             // Write the FITS file to disk
