@@ -28,6 +28,27 @@ public class Array2D {
     }
 
     /**
+     * Cast a 2D short array into float
+     * 
+     * @param arr The float array to be casted
+     * @return The new 2D float array
+     */
+    public static float[][] castToFloat(short[][] arr) {
+        int width = arr[0].length;
+        int height = arr.length;
+
+        float[][] castedArr = new float[height][width];
+
+        for (int row = 0; row < height; row++) {
+            for (int col = 0; col < width; col++) {
+                castedArr[row][col] = arr[row][col];
+            }
+        }
+
+        return castedArr;
+    }
+
+    /**
      * Cast a 2D float array to a 2D double array
      *
      * @param arr The float array to be converted
@@ -208,4 +229,22 @@ public class Array2D {
         }
     }
 
+    /** 
+     * Return 2D array as string for testing purposes
+     * 
+     * @param arr The 2D array to be printed  
+     * @return A string of the 2D array
+     */
+    public static String toString (float[][] arr) {
+        StringBuilder string = new StringBuilder();
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+                string.append(arr[i][j]).append(" ");
+            }
+           string.append("\n");
+        }
+
+        return string.toString();
+    }
 }
