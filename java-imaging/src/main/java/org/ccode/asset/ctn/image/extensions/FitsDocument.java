@@ -43,6 +43,9 @@ public class FitsDocument {
         // Check if the data is a 2D array (image)
         if (data instanceof float[][]) {
             rawData = (float[][]) data;
+        } else if (data instanceof short[][]) {         // added this new condition because data now results in
+            short[][] shortData = (short[][]) data;     // a 2D array of shorts instead of floats, so far works
+            rawData = Array2D.castToFloat(shortData);   // but idk if it's supposed to be short in the first place
         }
 
 
@@ -401,7 +404,7 @@ public class FitsDocument {
                     fitsData[row][col] = (short) (data[row][col] * MAX_USHORT_VAL + Short.MIN_VALUE);
 
             // Add data to fits file
-            ImageHDU hdu = new ImageHDU(newHeader, new ImageData(fitsData));
+            ImageHDU hdu = new ImageHDU(newHeader, new ImageData(fitsData)); //ImageHDU constructor deprecated, might wanna fix this
             fitsFile.addHDU(hdu);
 
             // Write the FITS file to disk
